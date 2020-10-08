@@ -3,7 +3,7 @@
 
 <head>
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-	<title>原神地图</title>
+	<title>원신지도</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="leaflet/leaflet.css">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
@@ -20,25 +20,25 @@
 		<img class="Background" src="imgs/con_img/Content.png">
 		<a href="javascript:;" class="fold-btn hd">fold</a>
 		<div class="person-div">
-			<a href="javascript:;" class="reg_log_link hd">登录/注册</a>
-			<a href="javascript:;" class="save-btn disable hd">存档</a>
+			<a href="javascript:;" class="reg_log_link hd">로그인/등록</a>
+			<a href="javascript:;" class="save-btn disable hd">보관</a>
 		</div>
 		<div class="topLine"></div>
 		<!-- 筛选器左侧页签 -->
 		<ul class="con-type-label-containor">
-			<li class="con-type-label lable1" i_type="TX">特性</li>
-			<li class="con-type-label lable2" i_type="TC">特产</li>
-			<li class="con-type-label lable3" i_type="KW">矿物</li>
-			<li class="con-type-label lable4" i_type="GW">怪物</li>
+			<li class="con-type-label lable1" i_type="TX">지표</li>
+			<li class="con-type-label lable2" i_type="TC">특산품</li>
+			<li class="con-type-label lable3" i_type="KW">광물</li>
+			<li class="con-type-label lable4" i_type="GW">몬스터</li>
 		</ul>
 		<!-- 筛选器上侧地区分类 -->
 		<ul class="area-list-containor">
 			<a href="javascript:;" class="area-list-li-containor on" i_area="MD">
-				<span class="area-text">蒙德</span>
+				<span class="area-text">몬드</span>
 				<span class="area-img mengde on hd">area-img</span>
 			</a>
 			<a href="javascript:;" class="area-list-li-containor off" i_area="LY">
-				<span class="area-text">璃月</span>
+				<span class="area-text">리월</span>
 				<span class="area-img liyue hd off">area-img</span>
 			</a>
 			<a href="javascript:;" class="area-list-li-containor off undone">
@@ -65,139 +65,140 @@
 		<!-- 筛选器下测已选项框体（占位元素，勿动） -->
 		<ul class="selector-list-containor">
 			<p style="display: none;"></p>
-			<p class="selector-hint">尚未选择收集要素</p>
+			<p class="selector-hint">수집요소를 선택하지 않았습니다</p>
 		</ul>
 		<!-- 筛选器筛选列表以及筛选项 -->
 		<div class="options-containor">
 			<div class="options-list">
 				<span class="Layer_FST map-opts" area="MD" itemtype="TX">
-					<div class="img-border"><img src="imgs/icon_0.png" class="map-opts-icon" alt="icon"></div>风神瞳
-				</span>
-				<span class="Layer_YST map-opts" area="LY" itemtype="TX">
-					<div class="img-border"><img src="imgs/icon_1.png" class="map-opts-icon" alt="icon"></div>岩神瞳
-				</span>
-				<span class="Layer_DLK_MD map-opts" area="MD" itemtype="TX">
-					<div class="img-border"><img src="imgs/icon_2.png" class="map-opts-icon" alt="icon"></div>地灵龛-蒙德
-				</span>
-				<span class="Layer_DLK_LY map-opts" area="LY" itemtype="TX">
-					<div class="img-border"><img src="imgs/icon_3.png" class="map-opts-icon" alt="icon"></div>地灵龛-璃月
-				</span>
-				<span class="Layer_BX_MD map-opts" area="MD" itemtype="TX">
-					<div class="img-border"><img src="imgs/icon_26.png" class="map-opts-icon" alt="icon"></div>宝箱-蒙德
-				</span>
-				<span class="Layer_BX_LY map-opts" area="LY" itemtype="TX">
-					<div class="img-border"><img src="imgs/icon_27.png" class="map-opts-icon" alt="icon"></div>宝箱-璃月
-				</span>
-				<span class="Layer_SJK_LY map-opts" area="LY" itemtype="KW">
-					<div class="img-border"><img src="imgs/icon_16.png" class="map-opts-icon" alt="icon"></div>水晶矿-璃月
-				</span>
-				<span class="Layer_BTK_LY map-opts" area="LY" itemtype="KW">
-					<div class="img-border"><img src="imgs/icon_17.png" class="map-opts-icon" alt="icon"></div>白铁矿-璃月
-				</span>
-				<span class="Layer_SJK_MD map-opts" area="MD" itemtype="KW">
-					<div class="img-border"><img src="imgs/icon_18.png" class="map-opts-icon" alt="icon"></div>水晶矿-蒙德
-				</span>
-				<span class="Layer_BTK_MD map-opts" area="MD" itemtype="KW">
-					<div class="img-border"><img src="imgs/icon_19.png" class="map-opts-icon" alt="icon"></div>白铁矿-蒙德
-				</span>
-				<span class="Layer_JYJJ map-opts" area="LY" itemtype="TC">
-					<div class="img-border"><img src="imgs/icon_4.png" class="map-opts-icon" alt="icon"></div>绝云椒椒
-				</span>
-				<span class="Layer_NSH map-opts" area="LY" itemtype="TC">
-					<div class="img-border"><img src="imgs/icon_5.png" class="map-opts-icon" alt="icon"></div>霓裳花
-				</span>
-				<span class="Layer_LLBH map-opts" area="LY" itemtype="TC">
-					<div class="img-border"><img src="imgs/icon_6.png" class="map-opts-icon" alt="icon"></div>琉璃百合
-				</span>
-				<span class="Layer_YPS map-opts" area="LY" itemtype="TC">
-					<div class="img-border"><img src="imgs/icon_14.png" class="map-opts-icon" alt="icon"></div>夜泊石
-				</span>
-				<span class="Layer_SP map-opts" area="LY" itemtype="TC">
-					<div class="img-border"><img src="imgs/icon_15.png" class="map-opts-icon" alt="icon"></div>石珀
-				</span>
-				<span class="Layer_GGG map-opts" area="MD" itemtype="TC">
-					<div class="img-border"><img src="imgs/icon_7.png" class="map-opts-icon" alt="icon"></div>钩钩果
-				</span>
-				<span class="Layer_DDL map-opts" area="MD" itemtype="TC">
-					<div class="img-border"><img src="imgs/icon_8.png" class="map-opts-icon" alt="icon"></div>嘟嘟莲
-				</span>
-				<span class="Layer_LLM map-opts" area="MD" itemtype="TC">
-					<div class="img-border"><img src="imgs/icon_11.png" class="map-opts-icon" alt="icon"></div>落落梅
-				</span>
-				<span class="Layer_SXLYH map-opts" area="MD" itemtype="TC">
-					<div class="img-border"><img src="imgs/icon_9.png" class="map-opts-icon" alt="icon"></div>塞西莉亚花
-				</span>
-				<span class="Layer_MFMG map-opts" area="MD" itemtype="TC">
-					<div class="img-border"><img src="imgs/icon_10.png" class="map-opts-icon" alt="icon"></div>慕风蘑菇
-				</span>
-				<span class="Layer_FCJ map-opts" area="MD" itemtype="TC">
-					<div class="img-border"><img src="imgs/icon_12.png" class="map-opts-icon" alt="icon"></div>风车菊
-				</span>
-				<span class="Layer_PGYZ map-opts" area="MD" itemtype="TC">
-					<div class="img-border"><img src="imgs/icon_13.png" class="map-opts-icon" alt="icon"></div>蒲公英籽
-				</span>
-				<span class="Layer_YJSW_LY map-opts" area="LY" itemtype="GW">
-					<div class="img-border"><img src="imgs/icon_20.png" class="map-opts-icon" alt="icon"></div>遗迹守卫
-				</span>
-				<span class="Layer_YJLZ_LY map-opts" area="LY" itemtype="GW">
-					<div class="img-border"><img src="imgs/icon_21.png" class="map-opts-icon" alt="icon"></div>遗迹猎者
-				</span>
-				<span class="Layer_DXQQR_LY map-opts" area="LY" itemtype="GW">
-					<div class="img-border"><img src="imgs/icon_25.png" class="map-opts-icon" alt="icon"></div>大型丘丘人
-				</span>
-				<span class="Layer_SYFS_LY map-opts" area="LY" itemtype="GW">
-					<div class="img-border"><img src="imgs/icon_24.png" class="map-opts-icon" alt="icon"></div>深渊法师
-				</span>
-				<span class="Layer_ZWCLR_LY map-opts" area="LY" itemtype="GW">
-					<div class="img-border"><img src="imgs/icon_23.png" class="map-opts-icon" alt="icon"></div>债务处理人
-				</span>
-				<span class="Layer_LYSS_LY map-opts" area="LY" itemtype="GW">
-					<div class="img-border"><img src="imgs/icon_22.png" class="map-opts-icon" alt="icon"></div>雷莹术士
-				</span>
-				<span class="Layer_LLD map-opts" area="LY" itemtype="TC">
-					<div class="img-border"><img src="imgs/icon_28.png" class="map-opts-icon" alt="icon"></div>琉璃袋
-				</span>
-				<span class="Layer_PPH_MD map-opts" area="MD" itemtype="GW">
-					<div class="img-border"><img src="imgs/icon_35.png" class="map-opts-icon" alt="icon"></div>骗骗花-蒙德
-				</span>
-				<span class="Layer_YYLX_LY map-opts" area="LY" itemtype="GW">
-					<div class="img-border"><img src="imgs/icon_39.png" class="map-opts-icon" alt="icon"></div>幼岩龙蜥-璃月
-				</span>
-				<span class="Layer_XQD_MD map-opts" area="MD" itemtype="GW">
-					<div class="img-border"><img src="imgs/icon_37.png" class="map-opts-icon" alt="icon"></div>先遣队-蒙德
-				</span>
-				<span class="Layer_XQD_LY map-opts" area="LY" itemtype="GW">
-					<div class="img-border"><img src="imgs/icon_38.png" class="map-opts-icon" alt="icon"></div>先遣队-璃月
-				</span>
-				<span class="Layer_DBT_LY map-opts" area="LY" itemtype="GW">
-					<div class="img-border"><img src="imgs/icon_34.png" class="map-opts-icon" alt="icon"></div>盗宝团-璃月
-				</span>
-				<span class="Layer_PPH_LY map-opts" area="LY" itemtype="GW">
-					<div class="img-border"><img src="imgs/icon_36.png" class="map-opts-icon" alt="icon"></div>骗骗花-璃月
-				</span>
-				<span class="Layer_SYFS_MD map-opts" area="MD" itemtype="GW">
-					<div class="img-border"><img src="imgs/icon_31.png" class="map-opts-icon" alt="icon"></div>深渊法师-蒙德
-				</span>
-				<span class="Layer_DXQQR_MD map-opts" area="MD" itemtype="GW">
-					<div class="img-border"><img src="imgs/icon_30.png" class="map-opts-icon" alt="icon"></div>大型丘丘人-蒙德
-				</span>
-				<span class="Layer_YJSW_MD map-opts" area="MD" itemtype="GW">
-					<div class="img-border"><img src="imgs/icon_29.png" class="map-opts-icon" alt="icon"></div>遗迹守卫-蒙德
-				</span>
-				<span class="Layer_QX map-opts" area="LY" itemtype="TC">
-					<div class="img-border"><img src="imgs/icon_44.png" class="map-opts-icon" alt="icon"></div>清心
-				</span>
-				<span class="Layer_MW map-opts" area="LY" itemtype="TC">
-					<div class="img-border"><img src="imgs/icon_45.png" class="map-opts-icon" alt="icon"></div>马尾
-				</span>
-				<span class="Layer_LP map-opts" area="LY" itemtype="TC">
-					<div class="img-border"><img src="imgs/icon_46.png" class="map-opts-icon" alt="icon"></div>莲蓬
-				</span>
+	<div class="img-border"><img src="imgs/icon_0.png" class="map-opts-icon" alt="icon"></div>	바람신의 눈동자
+</span>		
+<span class="Layer_YST map-opts" area="LY" itemtype="TX">		
+	<div class="img-border"><img src="imgs/icon_1.png" class="map-opts-icon" alt="icon"></div>	바위신의 눈동자
+</span>		
+<span class="Layer_DLK_MD map-opts" area="MD" itemtype="TX">		
+	<div class="img-border"><img src="imgs/icon_2.png" class="map-opts-icon" alt="icon"></div>	감실-몬드
+</span>		
+<span class="Layer_DLK_LY map-opts" area="LY" itemtype="TX">		
+	<div class="img-border"><img src="imgs/icon_3.png" class="map-opts-icon" alt="icon"></div>	감실-리월
+</span>		
+<span class="Layer_BX_MD map-opts" area="MD" itemtype="TX">		
+	<div class="img-border"><img src="imgs/icon_26.png" class="map-opts-icon" alt="icon"></div>	보물상자-몬드
+</span>		
+<span class="Layer_BX_LY map-opts" area="LY" itemtype="TX">		
+	<div class="img-border"><img src="imgs/icon_27.png" class="map-opts-icon" alt="icon"></div>	보물상자-리월
+</span>		
+<span class="Layer_SJK_LY map-opts" area="LY" itemtype="KW">		
+	<div class="img-border"><img src="imgs/icon_16.png" class="map-opts-icon" alt="icon"></div>	수정광-리월
+</span>		
+<span class="Layer_BTK_LY map-opts" area="LY" itemtype="KW">		
+	<div class="img-border"><img src="imgs/icon_17.png" class="map-opts-icon" alt="icon"></div>	백철광-리월
+</span>		
+<span class="Layer_SJK_MD map-opts" area="MD" itemtype="KW">		
+	<div class="img-border"><img src="imgs/icon_18.png" class="map-opts-icon" alt="icon"></div>	크리스털-몬드
+</span>		
+<span class="Layer_BTK_MD map-opts" area="MD" itemtype="KW">		
+	<div class="img-border"><img src="imgs/icon_19.png" class="map-opts-icon" alt="icon"></div>	백철-몬드
+</span>		
+<span class="Layer_JYJJ map-opts" area="LY" itemtype="TC">		
+	<div class="img-border"><img src="imgs/icon_4.png" class="map-opts-icon" alt="icon"></div>	절봉피망
+</span>		
+<span class="Layer_NSH map-opts" area="LY" itemtype="TC">		
+	<div class="img-border"><img src="imgs/icon_5.png" class="map-opts-icon" alt="icon"></div>	네온상화
+</span>		
+<span class="Layer_LLBH map-opts" area="LY" itemtype="TC">		
+	<div class="img-border"><img src="imgs/icon_6.png" class="map-opts-icon" alt="icon"></div>	유리 백합
+</span>		
+<span class="Layer_YPS map-opts" area="LY" itemtype="TC">		
+	<div class="img-border"><img src="imgs/icon_14.png" class="map-opts-icon" alt="icon"></div>	야박석
+</span>		
+<span class="Layer_SP map-opts" area="LY" itemtype="TC">		
+	<div class="img-border"><img src="imgs/icon_15.png" class="map-opts-icon" alt="icon"></div>	석박
+</span>		
+<span class="Layer_GGG map-opts" area="MD" itemtype="TC">		
+	<div class="img-border"><img src="imgs/icon_7.png" class="map-opts-icon" alt="icon"></div>	과자를 갈고리
+</span>		
+<span class="Layer_DDL map-opts" area="MD" itemtype="TC">		
+	<div class="img-border"><img src="imgs/icon_8.png" class="map-opts-icon" alt="icon"></div>	투투리엔
+</span>		
+<span class="Layer_LLM map-opts" area="MD" itemtype="TC">		
+	<div class="img-border"><img src="imgs/icon_11.png" class="map-opts-icon" alt="icon"></div>	낙매
+</span>		
+<span class="Layer_SXLYH map-opts" area="MD" itemtype="TC">		
+	<div class="img-border"><img src="imgs/icon_9.png" class="map-opts-icon" alt="icon"></div>	세실리아 꽃
+</span>		
+<span class="Layer_MFMG map-opts" area="MD" itemtype="TC">		
+	<div class="img-border"><img src="imgs/icon_10.png" class="map-opts-icon" alt="icon"></div>	모풍 버섯
+</span>		
+<span class="Layer_FCJ map-opts" area="MD" itemtype="TC">		
+	<div class="img-border"><img src="imgs/icon_12.png" class="map-opts-icon" alt="icon"></div>	수레국화
+</span>		
+<span class="Layer_PGYZ map-opts" area="MD" itemtype="TC">		
+	<div class="img-border"><img src="imgs/icon_13.png" class="map-opts-icon" alt="icon"></div>	민들레 씨
+</span>		
+<span class="Layer_YJSW_LY map-opts" area="LY" itemtype="GW">		
+	<div class="img-border"><img src="imgs/icon_20.png" class="map-opts-icon" alt="icon"></div>	유적 수비
+</span>		
+<span class="Layer_YJLZ_LY map-opts" area="LY" itemtype="GW">		
+	<div class="img-border"><img src="imgs/icon_21.png" class="map-opts-icon" alt="icon"></div>	유적 사냥꾼
+</span>		
+<span class="Layer_DXQQR_LY map-opts" area="LY" itemtype="GW">		
+	<div class="img-border"><img src="imgs/icon_25.png" class="map-opts-icon" alt="icon"></div>	대형언덕분에 대한 존칭
+</span>		
+<span class="Layer_SYFS_LY map-opts" area="LY" itemtype="GW">		
+	<div class="img-border"><img src="imgs/icon_24.png" class="map-opts-icon" alt="icon"></div>	심연법사
+</span>		
+<span class="Layer_ZWCLR_LY map-opts" area="LY" itemtype="GW">		
+	<div class="img-border"><img src="imgs/icon_23.png" class="map-opts-icon" alt="icon"></div>	채무처리인
+</span>		
+<span class="Layer_LYSS_LY map-opts" area="LY" itemtype="GW">		
+	<div class="img-border"><img src="imgs/icon_22.png" class="map-opts-icon" alt="icon"></div>	레이 영술사
+</span>		
+<span class="Layer_LLD map-opts" area="LY" itemtype="TC">		
+	<div class="img-border"><img src="imgs/icon_28.png" class="map-opts-icon" alt="icon"></div>	유리 가방
+</span>		
+<span class="Layer_PPH_MD map-opts" area="MD" itemtype="GW">		
+	<div class="img-border"><img src="imgs/icon_35.png" class="map-opts-icon" alt="icon"></div>	속임수-몬드
+</span>		
+<span class="Layer_YYLX_LY map-opts" area="LY" itemtype="GW">		
+	<div class="img-border"><img src="imgs/icon_39.png" class="map-opts-icon" alt="icon"></div>	유암용도마뱀류
+</span>		
+<span class="Layer_XQD_MD map-opts" area="MD" itemtype="GW">		
+	<div class="img-border"><img src="imgs/icon_37.png" class="map-opts-icon" alt="icon"></div>	선발대-몬드
+</span>		
+<span class="Layer_XQD_LY map-opts" area="LY" itemtype="GW">		
+	<div class="img-border"><img src="imgs/icon_38.png" class="map-opts-icon" alt="icon"></div>	선발대-리월
+</span>		
+<span class="Layer_DBT_LY map-opts" area="LY" itemtype="GW">		
+	<div class="img-border"><img src="imgs/icon_34.png" class="map-opts-icon" alt="icon"></div>	도보단-청월
+</span>		
+<span class="Layer_PPH_LY map-opts" area="LY" itemtype="GW">		
+	<div class="img-border"><img src="imgs/icon_36.png" class="map-opts-icon" alt="icon"></div>	꽃 사기-달 밝은 달
+</span>		
+<span class="Layer_SYFS_MD map-opts" area="MD" itemtype="GW">		
+	<div class="img-border"><img src="imgs/icon_31.png" class="map-opts-icon" alt="icon"></div>	심연법사-몽드
+</span>		
+<span class="Layer_DXQQR_MD map-opts" area="MD" itemtype="GW">		
+	<div class="img-border"><img src="imgs/icon_30.png" class="map-opts-icon" alt="icon"></div>	대형언덕-몬드
+</span>		
+<span class="Layer_YJSW_MD map-opts" area="MD" itemtype="GW">		
+	<div class="img-border"><img src="imgs/icon_29.png" class="map-opts-icon" alt="icon"></div>	유적수비-몬드
+</span>		
+<span class="Layer_QX map-opts" area="LY" itemtype="TC">		
+	<div class="img-border"><img src="imgs/icon_44.png" class="map-opts-icon" alt="icon"></div>	마음이 홀가시다
+</span>		
+<span class="Layer_MW map-opts" area="LY" itemtype="TC">		
+	<div class="img-border"><img src="imgs/icon_45.png" class="map-opts-icon" alt="icon"></div>	포니테일
+</span>		
+<span class="Layer_LP map-opts" area="LY" itemtype="TC">		
+	<div class="img-border"><img src="imgs/icon_46.png" class="map-opts-icon" alt="icon"></div>	연밥
+</span>		
+
 			</div>
 		</div>
 	</div>
 	<div class="bottom-rules">
-		<a href="disclaimer.html" target="_bal" class="disclaimer">免责声明/招募</a>
+		<a href="disclaimer.html" target="_bal" class="disclaimer">면책사항/채용</a>
 	</div>
 	<div class="bottom-beian">
 		<a href="http://beian.miit.gov.cn" target="_bal" class="beian">蜀ICP备2020028219号</a>
@@ -309,7 +310,7 @@
 		$(document).ready(function () {
 			$(".con-type-label:first").trigger("click");
 			$(".reg_log_link").click(function () {
-				alert("即将开放,敬请期待！");
+				alert("곧 열리니 기대해주세요!");
 			})
 
 			// 复制的方法
@@ -358,7 +359,7 @@
 				toolresult = JSON.stringify(markedLog1);
 				var texts = toolresult
 				copyText(texts, function () {
-					alert('复制成功 \n复制内容' + texts)
+					alert('복사 성공 \n복사 내용' + texts)
 				})
 				console.log(toolresult);
 			})
