@@ -450,7 +450,7 @@ function MarkPoint(element) {
 
 	var doneUrl = newValue ? "_done" : ""
 	if (layerNumber == 0 || layerNumber == 1) {
-		var iconUrl = "./imgs/icon_" + layerNumber + doneUrl + ".svg";
+		var iconUrl = "./imgs/icon_" + layerNumber + doneUrl + ".png";
 	} else {
 		var iconUrl = "./imgs/icon_" + layerNumber + doneUrl + ".png";
 	}
@@ -474,7 +474,7 @@ function MarkPoint(element) {
 		that.addClass("myPopSwitchDone");
 		that.removeClass("myPopSwitchTodo");
 		setTimeout(function () {
-			that.find(".switchButton p").html("已完成");
+			that.find(".switchButton p").html("완료됨");
 		}, 100);
 		setTimeout(function () {
 			closePop();
@@ -483,7 +483,7 @@ function MarkPoint(element) {
 		that.addClass("myPopSwitchTodo");
 		that.removeClass("myPopSwitchDone");
 		setTimeout(function () {
-			that.find(".switchButton p").html("未完成");
+			that.find(".switchButton p").html("미완료");
 		}, 100);
 	}
 }
@@ -501,7 +501,7 @@ for (let i = 0; i < typearray.length; i++) {
 			}
 			var doneUrl = markedFlag ? "_done" : ""
 			if (i == 0 || i == 1) {
-				var iconUrl = "./imgs/icon_" + i + doneUrl + ".svg";
+				var iconUrl = "./imgs/icon_" + i + doneUrl + ".png";
 			} else {
 				var iconUrl = "./imgs/icon_" + i + doneUrl + ".png";
 			}
@@ -579,7 +579,7 @@ map.on('popupopen', function (e) {
 	var key = className.substring(5, className.length);
 	var markedFlag = localStorage.getItem(key);
 	var switchClass = (!markedFlag) ? "myPopSwitchTodo" : "myPopSwitchDone";
-	var switchText = (!markedFlag) ? "未完成" : "已完成";
+	var switchText = (!markedFlag) ? "미완료" : "완료됨";
 	popupHtml = `
 	<div class="myPopContainer">
 		<div class="myPopTitle">
@@ -594,8 +594,8 @@ map.on('popupopen', function (e) {
 			<img src=comment_png/${key}.jpg onerror="javascript:$(\'.myPopComment,.myPopPicture\').addClass(\'disable\');$(\'.myPopComment\').css({\'cursor\': \'default\'})">
 		</div>
 		<div class="${switchClass}" onclick="MarkPoint(this)" data-key="${key}">
-			<p class="switchOff">未完成</p>
-			<p class="switchOn">已完成</p>
+			<p class="switchOff">미완료</p>
+			<p class="switchOn">완료됨</p>
 			<div class="switchButton">
 				<div class="switchButtonIcon">
 					<p>${switchText}</p>
