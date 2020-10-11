@@ -177,7 +177,7 @@ function getIconInfo(Name) {
 		case "ST": { //神瞳
 			var icon_base = L.Icon.extend({
 				options: {
-					iconSize: [24, 24], // size of the icon
+					iconSize: [40, 40], // size of the icon
 					shadowSize: [50, 64], // size of the shadow
 					iconAnchor: [12, 12], // point of the icon which will correspond to marker's location
 					shadowAnchor: [4, 62], // the same for the shadow
