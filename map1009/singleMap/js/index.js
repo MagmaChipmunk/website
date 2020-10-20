@@ -179,7 +179,7 @@ function getIconInfo(Name) {
 				options: {
 					iconSize: [40, 40], // size of the icon
 					shadowSize: [50, 64], // size of the shadow
-					iconAnchor: [12, 12], // point of the icon which will correspond to marker's location
+					iconAnchor: [20, 36], // point of the icon which will correspond to marker's location
 					shadowAnchor: [4, 62], // the same for the shadow
 					popupAnchor: [0, -12] // point from which the popup should open relative to the iconAnchor
 				}
